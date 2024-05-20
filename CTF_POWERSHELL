@@ -1,0 +1,112 @@
+Practical Exercise: Find Cmdlets
+
+
+   1.  Ensure that you have the latest copy of help by updating your help system.
+
+   2.  Which cmdlets deal with the viewing/manipulating of processes?
+      > get-process
+   3. Display a list of services installed on your local computer.
+      > get-service
+   4. What cmdlets are used to write or output objects or text to the screen?
+      > write-output
+   5. What cmdlets can be used to create, modify, list, and delete variables?
+      > Get-Variable
+      > New-Variable
+      > Remove-Variable 
+    
+   6. What cmdlet can be used, other than Get-Help, to find and list other cmdlets?
+      > Get-Command
+   7. Find the cmdlet that is used to prompt the user for input.
+      > Read-Host
+
+
+
+
+
+Practical Exercise: Running Cmdlets
+
+
+
+
+ 1.   Display a list of running processes.
+      > Get-Process
+
+
+ 2.  Display a list of all running processes that start with the letter "s".
+     > Get-Process | Where-Object { $_.ProcessName -like "s*" }
+
+
+ 3.   Find the cmdlet and its purpose for the following aliases:
+
+        gal = get-alias
+
+        dir = Get-childitem
+
+        echo = write-output
+
+        ? = where-object
+
+        % = ForEach-Object
+
+        ft = Format-Table
+
+  4.  Display a list of Windows Firewall Rules.
+      > Get-NetFirewallRule
+
+
+
+
+  5. Create a new alias called "gh" for the cmdlet "Get-Help"
+     > New-Alias -Name gh -Value Get-Help
+
+
+
+
+
+
+
+
+
+Practical Exercise: Variables
+
+ 1.   Create a variable called "var1" that holds a random number between 25-50.
+      > $var1 = Get-Random -Minimum 25 -Maximum 51
+
+ 2.  Create a variable called "var2" that holds a random number between 1-10.
+      > $var2 = Get-Random -Minimum 1 -Maximum 10
+
+ 3.  Create a variable called "sum" that holds the sum of var1 and var2.
+      > $sum = $var1 + $var2
+ 4.  Create a variable called "sub" that holds the difference of var1 and var2.
+      > $sub = $var1 - $var2
+ 5.  Create a variable called "prod" that holds the product of var1 and var2.
+      > $prod = $var1 * $var2
+ 6.   Create a variable called "quo" that holds the quotient of var1 and var2.
+      > $quo = $var1 / $var2
+ 7.   Replace the variables in text with their values in the following format:
+
+        "var1" + "var2" = "sum"
+
+  8.  Replace the variables in text with their values in the following format:
+
+        "var1" - "var2" = "sub"
+
+   9. Replace the variables in text with their values in the following format:
+
+        "var1" * "var2" = "prod"
+
+  10.  Replace the variables in text with their values in the following format:
+
+        "var1" / "var2" = "quo"
+
+
+
+
+
+
+
+
+
+
+
+
