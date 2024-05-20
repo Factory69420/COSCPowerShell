@@ -31,3 +31,11 @@ METHODS:
 >> .GetType()
 >> .Name (doesnt print table just prints type USEFUL!!!)
 >> | get-member 
+
+
+
+Single quotes are literal
+Double quotes are the value
+
+example '$var1' will print $var1
+example "$var1" will print the actual content of $var1
