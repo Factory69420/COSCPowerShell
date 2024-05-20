@@ -39,3 +39,13 @@ Double quotes are the value
 
 example '$var1' will print $var1
 example "$var1" will print the actual content of $var1
+
+
+
+
+
+>&$varname - will run  the code stored in the variable
+
+
+` is the escape character for powershell it will allow us to have things on more than one line (wrapping words) 
+Sort-object will sort
