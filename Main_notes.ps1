@@ -49,3 +49,47 @@ example "$var1" will print the actual content of $var1
 
 ` is the escape character for powershell it will allow us to have things on more than one line (wrapping words) 
 Sort-object will sort
+
+
+
+-------------------------------------------------------------------------------DAY 2-----------------------------------------------------------------------
+
+
+$nums = 1,2,3,4,5
+$nums.GetType()
+$nums | ForEach-Object{$_ * 2}
+foreach($I in $nums){$i * 2}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+$BB = "Mr. Krabs", "Sandy", "spOnGe bOb", "Patrick", "Larry the Lobster", "Plankton"
+foreach($fish in $BB)
+{
+if($fish -like 'SPONGE*'){
+    "$fish is the best fry cook"
+
+    }
+    elseif($fish -match '^L.*r$'){
+        "$fish has the most gains"
+    }
+    else{
+     "$fish is a fine citizen"
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+$num = 0
+
+
+
+while($num -lt 5){
+    $num
+    $num++
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+>'cat','dog' -join " "
+output: cat dog
+
+
+
