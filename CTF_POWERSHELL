@@ -1,3 +1,5 @@
+
+
 Practical Exercise: Find Cmdlets
 
 
@@ -23,6 +25,7 @@ Practical Exercise: Find Cmdlets
 
 
 
+-------------------------------------------------------------------------------------------------------------------------------------
 Practical Exercise: Running Cmdlets
 
 
@@ -67,6 +70,7 @@ Practical Exercise: Running Cmdlets
 
 
 
+-------------------------------------------------------------------------------------------------------------------------------------
 Practical Exercise: Variables
 
  1.   Create a variable called "var1" that holds a random number between 25-50.
@@ -104,7 +108,71 @@ Practical Exercise: Variables
 
 
 
+-------------------------------------------------------------------------------------------------------------------------------------
 Practical Exercise: Reverse Arrays
+
+
+
+    Create an array containing a range with a random starting and stopping point. The starting point will be a random number from -10 through 0. The ending point will be a random number from 1 through 20.
+
+	For example, if the first random number is -3, and the second random number is 2, your array will be -3, -2, -1, 0, 1, 2
+
+    Create a variable that contains the contents of the array in reverse
+
+	Using the above example, your reversed array will be 2, 1, 0, -1, -2, -3 
+
+$randomStart = Get-Random -Minimum -10 -Maximum 0
+
+
+$randomEnd = Get-Random -Minimum 1 -Maximum 21
+
+
+$rangeArray = $randomStart..$randomEnd
+
+Write-Output $rangeArray
+$reversed = [array]::Reverse($rangeArray)
+
+
+$rangearray.Length
+#$reversed = $rangearray[$rangearray.Length-1)..0]
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Practical Exercise: Arrays & Hash Tables
+
+
+$x=2
+if ($x -eq 5) {
+    Write-Host "Bob"
+}
+elseif ($x -eq 4){
+        Write-Host "Sue"
+}
+elseif ($x -eq 2){
+    "Tom"
+}
+elseif ($x -gt 1){
+    "Mary"
+}
+else{
+    "Who am I?"
+}
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Practical Exercise: Looping & Iteration
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
