@@ -1,0 +1,233 @@
+function q10($filepath, $lasthash) {
+  <#
+    .SYNOPSIS
+      Checks if the contents of a file have changed since a previous hash.
+
+    .PARAMETERS
+      $filepath - Path to the file.
+      $lasthash - Previously computed SHA256 hash of the file content (as a string).
+
+    .RETURNS
+      $true if the content has changed, $false otherwise.
+
+    .EXAMPLE
+      $filePath = "C:\path\to\file.txt"
+      $lastHash = (Get-Content $filePath).ConvertTo-SHA256
+
+      if (q10($filePath, $lastHash)) {
+        Write-Warning "File content has changed!"
+      } else {
+        Write-Host "File content remains the same."
+      }
+  #>
+
+  # Check if the file exists
+  if (-not (Test-Path $filepath)) {
+    Write-Error "File '$filepath' does not exist."
+    return $false
+  }
+
+  # Get the file content and convert to SHA256 hash
+  $currentHash = (Get-Content $filepath).ConvertTo-SHA256
+
+  # Compare the current hash with the last hash
+  if ($currentHash -eq $lasthash) {
+    return $true  # Content hasn't changed
+  } else {
+    return $false # Content has changed
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function q10($filepath, $lasthash) {
+  <# Return `$true if the contents of the file given in the
+      `$filepath argument have changed since `$lasthash was
+      computed. `$lasthash is the previously computed SHA256#>
+
+  
+  if (-not (Test-Path $filepath)) {
+    Write-Error "File '$filepath' does not exist."
+    return $false
+  }
+
+  
+
+  
+  if ($currentHash -eq $lasthash) {
+    return $true  
+  } else {
+    return $false 
+  }
+
+  Get-FileHash
+   
+  
+
+
+
+}
+
+
+
+
+
+function q10($filepath, $lasthash) {
+  <#
+    .SYNOPSIS
+      Checks if the contents of a file have changed since a previous hash.
+
+    .PARAMETERS
+      $filepath - Path to the file.
+      $lasthash - Previously computed SHA256 hash of the file content (as a string).
+
+    .RETURNS
+      $true if the content has changed, $false otherwise.
+
+    .EXAMPLE
+      $filePath = "C:\path\to\file.txt"
+      Import-Module Microsoft.PowerShell.Utility
+      $lastHash = Get-Hash -Path $filePath -Algorithm SHA256
+
+      if (q10($filePath, $lastHash)) {
+        Write-Warning "File content has changed!"
+      } else {
+        Write-Host "File content remains the same."
+      }
+  #>
+
+  # Check if the file exists
+  if (-not (Test-Path $filepath)) {
+    Write-Error "File '$filepath' does not exist."
+    return $false
+  }
+
+  # Import module and use Get-Hash (only for v5.1 and later)
+  Import-Module Microsoft.PowerShell.Utility
+  $currentHash = Get-Hash -Path $filepath -Algorithm SHA256
+
+  # Compare the current hash with the last hash
+  if ($currentHash.Hash -eq $lasthash) {
+    return $true  # Content hasn't changed
+  } else {
+    return $false # Content has changed
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function q6 {
+    [CmdletBinding()]
+    param (
+        [Parameter(ValueFromPipeline = $true)]
+        [int]$InputObject
+    )
+
+    # Initialize a variable to keep track of the sum
+    $sum = 0
+
+    # Begin block to initialize the sum
+    begin {
+        $sum = 0
+    }
+
+    # Process block to handle each pipeline input
+    process {
+        $sum += $InputObject
+    }
+
+    # End block to output the final sum
+    end {
+        Write-Output $sum
+    }
+}
+
+
+
+
+
+
+function q6 {
+    <# Return the sum of all elements provided on the pipeline
+	#>
+
+ 
+ 
+    # Initialize a variable to keep track of the sum
+    $sum = 0
+
+    # Process block to handle each pipeline input
+    process {
+        $sum += $_
+    }
+
+    # End block to output the final sum
+    end {
+        return $sum
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
